@@ -47,12 +47,24 @@
       backdrop-filter:blur(18px) saturate(120%);
       -webkit-backdrop-filter:blur(18px) saturate(120%);
     }
-    .reader-bar__row{display:flex;min-width:0;align-items:center;gap:11px}
-    .reader-bar__avatar{width:38px;height:38px;flex:0 0 38px;border:1px solid rgba(255,215,109,.6);border-radius:50%;object-fit:cover;background:#111}
-    .reader-bar__identity{min-width:0;line-height:1.08}
-    .reader-bar__name{display:block;overflow:hidden;color:#fff;font-size:13px;font-weight:700;text-overflow:ellipsis;white-space:nowrap}
+    .reader-bar__row{display:flex;min-width:0;align-items:center;gap:14px}
+    .reader-bar__identity{min-width:0;padding-left:2px;line-height:1.08}
+    .reader-bar__name{display:block;overflow:hidden;color:#fff;font-size:14px;font-weight:700;letter-spacing:-.01em;text-overflow:ellipsis;white-space:nowrap}
     .reader-bar__meta{display:block;margin-top:4px;overflow:hidden;color:rgba(242,241,237,.58);font-size:10px;font-weight:500;letter-spacing:.01em;text-overflow:ellipsis;white-space:nowrap}
-    .reader-bar__topic{margin-left:auto;color:rgba(242,241,237,.82);font-size:10px;font-weight:600;line-height:1.15;text-align:right}
+    .reader-bar__percent{
+      display:block;
+      min-width:42px;
+      margin-left:auto;
+      color:rgba(255,224,143,.92);
+      font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;
+      font-size:15px;
+      font-variant-numeric:tabular-nums;
+      font-weight:600;
+      letter-spacing:-.025em;
+      line-height:1;
+      text-align:right;
+      text-shadow:0 0 18px rgba(215,154,36,.2);
+    }
     .reader-progress{
       position:relative;
       height:8px;
@@ -527,11 +539,11 @@
 <body>
   <header class="reader-bar" aria-label="Автор и прогресс чтения">
     <div class="reader-bar__row">
-      <img class="reader-bar__avatar" src="./assets/images/nurlan-avatar.jpeg" alt="Нурлан Пралиев">
       <div class="reader-bar__identity">
         <strong class="reader-bar__name">Trading Strategy</strong>
         <span class="reader-bar__meta">@paxnurlana · Gold Trader</span>
       </div>
+      <output class="reader-bar__percent" aria-live="off">0%</output>
     </div>
     <div class="reader-progress" role="progressbar" aria-label="Прогресс чтения" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
       <div class="reader-progress__fill"></div>
@@ -561,9 +573,9 @@
             <figure class="certificate-proof"><img src="./assets/images/payout-01-8400.webp" alt="Выплата $8,400" loading="lazy" decoding="async"></figure>
             <figure class="certificate-proof"><img src="./assets/images/payout-02-7000.webp" alt="Выплата $7,000" loading="lazy" decoding="async"></figure>
             <figure class="certificate-proof"><img src="./assets/images/payout-03-6500.webp" alt="Выплата $6,500" loading="lazy" decoding="async"></figure>
-            <figure class="certificate-proof"><img src="./assets/images/payout-10-2420.webp" alt="Выплата $2,420" loading="lazy" decoding="async"></figure>
+            <figure class="certificate-proof"><img src="./assets/images/payout-04-5300.webp" alt="Выплата $5,300" loading="lazy" decoding="async"></figure>
             <figure class="certificate-proof"><img src="./assets/images/payout-11-2300.webp" alt="Выплата $2,300" loading="lazy" decoding="async"></figure>
-            <figure class="certificate-proof"><img src="./assets/images/payout-12-2000.webp" alt="Выплата $2,000" loading="lazy" decoding="async"></figure>
+            <figure class="certificate-proof"><img src="./assets/images/payout-05-5180.webp" alt="Выплата $5,180.15" loading="lazy" decoding="async"></figure>
           </div>
         </div>
 
@@ -671,7 +683,7 @@
           <div class="prop-logo"><img src="./assets/images/myfundedfutures.png" alt=""><span>MyFunded Futures</span></div>
           <div class="prop-logo"><img src="./assets/images/alpha-capital.png" alt=""><span>Alpha Capital</span></div>
           <div class="prop-logo"><img src="./assets/images/fundednext.png" alt=""><span>FundedNext</span></div>
-          <div class="prop-logo"><img src="./assets/images/ftmo.png" alt=""><span>FTMO</span></div>
+          <div class="prop-logo"><img src="./assets/images/the5ers.webp" alt="Логотип The5ers"><span>The5ers</span></div>
           <div class="prop-logo"><img src="./assets/images/fundingpips.png" alt=""><span>Funding Pips</span></div>
         </div>
         <div class="body-copy-wide">
@@ -952,7 +964,7 @@
         <div class="body-copy-wide">
           <p>Если вы хотите научиться применять эту систему самостоятельно, стабильно торговать и зарабатывать — приглашаю на своё обучение. Нажмите, чтобы посмотреть программу.</p>
         </div>
-        <a href="https://paxnurlana.github.io/trading-community/">Посмотреть программу обучения <span>→</span></a>
+        <a href="https://mentorship.xauusd-trader.online/">Посмотреть программу обучения <span>→</span></a>
         <div class="body-copy-wide">
           <p>Но умение находить сделку — это ещё не весь путь.</p>
           <p>Следующий шаг — понять, <strong>как превратить знания и отдельные хорошие сделки в стабильную торговлю и результат на дистанции.</strong></p>
@@ -1009,9 +1021,6 @@
         <div class="payout-grid" aria-label="Подтверждения стабильных выплат">
           <img src="./assets/images/payout-14-1549.webp" alt="Выплата $1,549.45" loading="lazy" decoding="async">
           <img src="./assets/images/payout-13-1986.webp" alt="Выплата $1,986.49" loading="lazy" decoding="async">
-          <img src="./assets/images/payout-06-4148.webp" alt="Выплата $4,148" loading="lazy" decoding="async">
-          <img src="./assets/images/payout-05-5180.webp" alt="Выплата $5,180.15" loading="lazy" decoding="async">
-          <img src="./assets/images/payout-04-5300.webp" alt="Выплата $5,300" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -1020,7 +1029,7 @@
       <div class="reading">
         <h2 class="path-bridge">Мне пришлось пройти этот путь самостоятельно.<span>Но вам необязательно тратить на него столько же времени.</span></h2>
         <div class="body-copy-wide"><p>Если вы хотите пройти этот путь быстрее и не повторять те же ошибки, можете посмотреть, как устроено моё обучение.</p></div>
-        <a class="course-link" href="https://paxnurlana.github.io/trading-community/">Начать обучение <span>→</span></a>
+        <a class="course-link" href="https://mentorship.xauusd-trader.online/">Начать обучение <span>→</span></a>
       </div>
     </section>
 
@@ -1052,11 +1061,11 @@
           <p>Внутри вы получите все уроки по моей системе торговли, доступ к сообществу и <strong>целый год работы вместе.</strong> Если вы только начинаете, сможете сразу выстроить правильный фундамент и не тратить годы на хаотичный поиск стратегий. Если уже торгуете, но стабильного результата пока нет, сможете использовать этот год, чтобы разобраться в своих ошибках и глубоко отработать один понятный подход.</p>
         </div>
         <div class="training-format" aria-label="Формат годового обучения">
-          <div><b>01</b>Видеоуроки</div><div><b>02</b>Еженедельные созвоны</div><div><b>03</b>Разбор ваших сделок</div><div><b>04</b>Личная обратная связь</div><div><b>05</b>Сообщество и материалы</div><div><b>06</b>Один год практики</div>
+          <div><b>01</b>Видеоуроки</div><div><b>02</b>Еженедельные созвоны</div><div><b>03</b>Разбор ваших сделок</div><div><b>04</b>Личная обратная связь</div><div><b>05</b>Один год практики</div>
         </div>
         <div class="body-copy-wide"><p>При этом вам не нужно проводить перед графиком весь день. Моя собственная торговля занимает около двух часов вечером, и именно вокруг такого режима можно спокойно выстраивать регулярную практику.</p></div>
         <div class="year-invite">Если хотите начать путь к <span>прибыльной торговле</span> — жду вас на своём обучении.</div>
-        <a class="course-link" href="https://paxnurlana.github.io/trading-community/">Перейти к обучению <span>→</span></a>
+        <a class="course-link" href="https://mentorship.xauusd-trader.online/">Перейти к обучению <span>→</span></a>
       </div>
     </section>
 
@@ -1065,14 +1074,17 @@
     (() => {
       const progress = document.querySelector('.reader-progress');
       const fill = document.querySelector('.reader-progress__fill');
-      if (!progress || !fill) return;
+      const percent = document.querySelector('.reader-bar__percent');
+      if (!progress || !fill || !percent) return;
 
       let scheduled = false;
       const updateProgress = () => {
         const scrollable = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
         const value = Math.min(100, Math.max(0, (window.scrollY / scrollable) * 100));
+        const rounded = Math.round(value);
         fill.style.width = value + '%';
-        progress.setAttribute('aria-valuenow', String(Math.round(value)));
+        percent.textContent = rounded + '%';
+        progress.setAttribute('aria-valuenow', String(rounded));
         scheduled = false;
       };
       const requestUpdate = () => {
